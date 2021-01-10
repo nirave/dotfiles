@@ -1,4 +1,4 @@
-" This is the vim-plug, if not found
+" This is the vim-plug, if not found, it will download
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -53,11 +53,21 @@ set number
 " Allow the mouse
 set mouse=a
 
+" Set tabs to 4
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+au FileType c,cpp set tabstop=8 | set shiftwidth=8
+
 " Get rid of that annoying pop-up for YouCompleteMe after running
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Disable the C++ load question
 let g:ycm_confirm_extra_conf = 0
+
+" NerdTree open into new tab
+let NERDTreeMapOpenInTab='<ENTER>'
 
 """"""""""""""""
 " Remaps
