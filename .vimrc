@@ -49,6 +49,10 @@ filetype plugin on
 
 " Set line numbers
 set number
+set relativenumber
+
+" Allow scrolling before the end of the window
+set scrolloff=4
 
 " Allow the mouse
 set mouse=a
@@ -57,7 +61,9 @@ set mouse=a
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set smartindent
 
+" C/C++ specifc tabs
 au FileType c,cpp set tabstop=8 | set shiftwidth=8
 
 " Get rid of that annoying pop-up for YouCompleteMe after running
@@ -68,6 +74,31 @@ let g:ycm_confirm_extra_conf = 0
 
 " NerdTree open into new tab
 let NERDTreeMapOpenInTab='<ENTER>'
+
+" Highlight trailing spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" Remove the highlighting for search that stays after
+set nohlsearch
+
+" Highlight as you search
+set incsearch
+
+" No swapfile needed
+set noswapfile
+
+" Keep the backups (// keeps the directory structure)
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
+
+" Other
+set noerrorbells
 
 """"""""""""""""
 " Remaps

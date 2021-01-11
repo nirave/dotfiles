@@ -9,11 +9,11 @@ curl https://raw.githubusercontent.com/nirave/dotfiles/main/.vimrc --output ~/.v
 
 Once opened, run
 
-:PluginInstall
+    :PluginInstall
 
 Afterwards, run:
 
-python3 build.py --clang-completer in ycmd directory
+    python3 build.py --clang-completer in ycmd directory
 
 ### Commands
 
@@ -63,7 +63,7 @@ Nerd Commentor is used for comments
 | A | insert at end of line |
 | [N]b | beginning of word |
 | [N]e | end of word |
-| [N]B | beginning of word (but symbols/ounctuation are not separators)  |
-| [N]E | end of word (but symbols/ounctuation are not separators)  |
+| [N]B | beginning of word (but symbols/punctuation are not separators)  |
+| [N]E | end of word (but symbols/punctuation are not separators)  |
 | H M L | Home, Middle, Last of the screen |
 | g GG | Beginning, end of window |
