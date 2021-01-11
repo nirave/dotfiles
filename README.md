@@ -11,9 +11,14 @@ Once opened, run
 
     :PluginInstall
 
-Afterwards, run:
+Afterwards, setup YouCompleteMe:
 
     python3 build.py --clang-completer in ycmd directory
+
+Afterwards, setup vimspector (the debugger) for all available languages:
+
+    /.vim/plugged/vimspector
+    python3 install_gadget.py --all
 
 ### Commands
 
@@ -33,8 +38,8 @@ NerdTree is used for file exploration
 
 | Keys | Description |
 | ---- | ----------- |
-| Ctrl-N | Open NerdTree Window |
-| Ctrl-T | Toggle Nerd Focus |
+| Ctrl-n | Open NerdTree Window |
+| Ctrl-t | Toggle Nerd Focus |
 | \n | Toggle Nerd Focus |
 
 ### Commenting
@@ -67,3 +72,28 @@ Nerd Commentor is used for comments
 | [N]E | end of word (but symbols/punctuation are not separators)  |
 | H M L | Home, Middle, Last of the screen |
 | g GG | Beginning, end of window |
+
+### Debugging
+
+To launch the debugger, you will need to create a .viminspector.json.
+
+Here is an example:
+
+    {
+      "configurations": {
+        "<name>: Launch": {
+          "adapter": "debugpy",
+          "configuration": {
+            "name": "<name>: Launch",
+            "type": "python",
+            "request": "launch",
+            "cwd": "~/src",
+            "python": "/usr/bin/python3",
+            "stopOnEntry": true,
+            "console": "externalTerminal",
+            "debugOptions": [],
+            "program": "./test.py"
+          }
+        }
+      }
+    }
