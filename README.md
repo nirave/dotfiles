@@ -59,6 +59,23 @@ Nerd Commentor is used for comments
 | :help <topic> | help on <topic> |
 | :helpclose | closes help |
 
+### Tabs
+
+| Keys | Description |
+| ---- | ----------- |
+| :tabnew <filename> | open file in new tab |
+| gt | go to next tab |
+| gT | go to previous tab |
+
+### Buffers
+
+| Keys | Description |
+| ---- | ----------- |
+| :ls | list all open buffer |
+| :b <index> or <file> | opens a file |
+| :bn | go to next buffer |
+| :bp | go to previous buffer |
+
 ### Movement
 
 | Keys | Description |
@@ -72,10 +89,20 @@ Nerd Commentor is used for comments
 | [N]E | end of word (but symbols/punctuation are not separators)  |
 | H M L | Home, Middle, Last of the screen |
 | g GG | Beginning, end of window |
+| Ctrl-O | Go to last cursor |
+| Ctrl-u | move up by half screen |
+| Ctrl-d | move down by half screen |
+
+### Cheatsheet
+
+| Keys | Description |
+| ---- | ----------- |
+| \K   | Search the keyword |
+| :HowIn <language> <lookup> | e.g. :HowIn python open file |
 
 ### Debugging
 
-To launch the debugger, you will need to create a .viminspector.json.
+To launch the debugger, you will need to create a .viminspector.json in the current directory.
 
 Here is an example:
 
@@ -97,3 +124,15 @@ Here is an example:
         }
       }
     }
+
+
+| Keys | Description |
+| ---- | ----------- |
+| :VimspectorReset | close Debugger |
+| F5 | continue |
+| F4 | restart |
+| F3 | stop |
+| F10 | step over |
+| Ctrl-w hjkl (or arrows)) | switch windows in debugger |
+| :ls | list buffers |
+| :<buffer number x> | switch to buffer x |

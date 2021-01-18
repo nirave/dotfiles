@@ -39,6 +39,10 @@ Plug 'tpope/vim-fugitive'
 " Get language cheatsheet easily
 Plug 'dbeniamine/cheat.sh-vim'
 
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 """"""""""""""""""""
@@ -69,6 +73,9 @@ au FileType c,cpp set tabstop=8 | set shiftwidth=8
 " Get rid of that annoying pop-up for YouCompleteMe after running
 let g:ycm_autoclose_preview_window_after_completion = 1
 
+" Disable the hover command for YouCompleteMe
+let g:ycm_auto_hover=''
+
 " Disable the C++ load question
 let g:ycm_confirm_extra_conf = 0
 
@@ -97,8 +104,14 @@ set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp//
 
+" Load a project specific .vimrc as well
+set exrc
+
 " Other
 set noerrorbells
+
+" Viminspector settings
+let g:vimspector_enable_mappings = 'HUMAN'
 
 """"""""""""""""
 " Remaps
