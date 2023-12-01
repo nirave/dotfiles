@@ -17,15 +17,24 @@ You can then move that directory to whever you want
 
 ## Commands
 
+### Fuzzy Finder
+
+Telescope is used for Fuzzy Finder
+| ---- | ----------- |
+| ff  | find file fuzzy finder |
+| fg  | grep files fuzzy finder |
+| fb  | find buffers fuzzy finder |
+| fh  | help fuzzy finder |
+
 ### Autocomplete
 
 YouCompleteMe is used for autocomplete
 
 | Keys | Description |
 | ---- | ----------- |
-| ,gf  | Go To Definition |
-| ,gd  | Go To Declaration |
-| ,gr  | Go To References (does not work with c/c++) |
+| gf  | Go To Definition |
+| gd  | Go To Declaration |
+| gr  | Go To References (does not work with c/c++) |
 
 ### File tree
 
