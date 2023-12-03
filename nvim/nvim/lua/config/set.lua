@@ -21,6 +21,6 @@ vim.opt.errorbells = false
 
 -- Set the terminal color
 -- Note that if using Mac's default terminal app, this will cause it to show weird
--- If so, run: set notermguicolors 
+-- If so, run: set notermguicolors
 vim.opt.termguicolors = true
-vim.api.nvim_command [[colorscheme elflord]]
+vim.api.nvim_command [[colorscheme nightfly]]

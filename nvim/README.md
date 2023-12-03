@@ -1,6 +1,3 @@
-# dotfiles
-This is my own neovim "distribution" if you will
-
 # NeoVim
 
 ## Installation
@@ -53,7 +50,7 @@ Nerd Commentor is used for comments
 | Keys | Description |
 | ---- | ----------- |
 | gcp | toggle comment until the end of the paragraph
-| gcc | toggle comment on line 
+| gcc | toggle comment on line
 | gcX | toggle comment on X+1 lines
 | v (for visual mode) | select lines, then press gc to toggle comments
 
@@ -72,7 +69,7 @@ Nerd Commentor is used for comments
 | :b <index> or <file> | opens a file |
 | bn | go to next buffer |
 | bp | go to previous buffer |
-| bq | quit the current buffer without saving |
+| bd | quit the current buffer without saving |
 | :bw! | quit the current buffer without saving |
 
 ### Movement
@@ -92,6 +89,18 @@ Nerd Commentor is used for comments
 | Ctrl-u | move up by half screen |
 | Ctrl-d | move down by half screen |
 
+### Windows
+
+| Keys | Description |
+| ---- | ----------- |
+| :sp | Split Vertically (left and right) |
+| :vsp | Split Horizontally (top and bottom) |
+| :only | Close all other windows |
+| Ctrl-W arrow | move to window pointing to that error |
+| Ctrl-W _ | Maximize buffer to window size|
+| :resize (-) number | reduce the height of a window |
+| :vertical resize (-) number | reduce the width of a window |
+
 ### Cheatsheet
 
 | Keys | Description |
@@ -104,3 +113,27 @@ Nerd Commentor is used for comments
 | Keys | Description |
 | ---- | ----------- |
 | :BlameToggle | Toggles off the git blame |
+
+### Whitespace
+
+| Keys | Description |
+| ---- | ----------- |
+| :StripWhiteSpace | Removes all trailing whitespace |
+| :StripWhiteSpaceOnChangedLines | Removes all trailing whitespace on changed lines only |
+| :ToggleWhitespace | Toggles whitespace |
+
+### Debugging with DAP
+
+| Keys | Description |
+| ---- | ----------- |
+| ,d | Start debug with Python (setup python, setup and open ui) |
+| ,c | Start of continue debugging |
+| ,b | Set a breakpoint |
+| ,bc | Set a conditional breakpoint |
+| ,s | Step over |
+| ,i | Step in |
+| ,o | Step out |
+| ,uc | Close debugging UI |
+| ,us | Setup debugging UI |
+| ,us | Open debugging UI |
+| ,ds | Setup python Debugging |

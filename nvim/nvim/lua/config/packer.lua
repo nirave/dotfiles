@@ -18,7 +18,6 @@ end
 -- TO DO - figure out how to get it to work with this file
 -- In the meantime, use :PackerSync
 
-
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd([[
   augroup packer_user_config
@@ -44,7 +43,7 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-	use ("wbthomason/packer.nvim") -- Have packer manage itself	
+	use ("wbthomason/packer.nvim") -- Have packer manage itself
 
     use ('preservim/nerdtree')
     use ('vim-airline/vim-airline')
@@ -70,6 +69,7 @@ return packer.startup(function(use)
         }
     }
 
+    -- Comment
     use {
         'numToStr/Comment.nvim',
         config = function()
@@ -77,11 +77,25 @@ return packer.startup(function(use)
    	 end
     }
 
+    -- cheat.sh
     use {'dbeniamine/cheat.sh-vim'}
 
+    -- Git
     use {'tpope/vim-fugitive'}
 
+    -- Git blame
     use {'APZelos/blamer.nvim'}
+
+    -- Debugging
+    use {'mfussenegger/nvim-dap'}
+    use {'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'} }
+    use {'mfussenegger/nvim-dap-python' }
+
+    -- Whitespace
+    use {'ntpeters/vim-better-whitespace'}
+
+    -- Colorscheme
+    use {'bluz71/vim-nightfly-colors'}
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
