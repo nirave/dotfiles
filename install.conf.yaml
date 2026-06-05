@@ -1,0 +1,24 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- link:
+    ~/.config/niravim: niravim
+
+- shell:
+  - command: bin/install-deps.sh
+    description: Installing dependencies
+  - command: mkdir -p ~/.local/bin && cp bin/niravim ~/.local/bin/
+    description: Creating directory and copying niravim
+  - command: chmod +x ~/.local/bin/niravim
+    description: Setting execute permissions
+  - command: grep -q 'export PATH="$HOME/.local/bin:$PATH"' ~/.bashrc || echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+    description: Adding PATH to .bashrc
+  - command: grep -q 'export PATH="$HOME/.local/bin:$PATH"' ~/.zshrc || echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+    description: Adding PATH to .zshrc
+  - command: bin/packer-install
+    description: Syncing Neovim plugins
+
+  - command: bin/check-nvim-version.sh
+    description: Checking Neovim version

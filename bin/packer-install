@@ -1,0 +1,5 @@
+#!/bin/bash
+export XDG_CONFIG_HOME="$HOME/.config/niravim"
+export XDG_DATA_HOME="$HOME/.local/share/nvim-niravim"
+nvim --headless -c "PackerUserConfig" -c "PackerInstall" -c "sleep 5" -c "qa"
+

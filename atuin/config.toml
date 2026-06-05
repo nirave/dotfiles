@@ -1,0 +1,7 @@
+db_path = "~/.local/share/atuin/history.db"
+key_path = "~/.local/share/atuin/key"
+sync_address = "https://api.atuin.sh"
+sync_frequency = "1h"
+auto_sync = true
+up_key = "k"
+down_key = "j"

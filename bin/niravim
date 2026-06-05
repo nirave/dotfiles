@@ -1,0 +1,4 @@
+#!/bin/bash
+export XDG_CONFIG_HOME="$HOME/.config/niravim"
+export XDG_DATA_HOME="$HOME/.local/share/nvim-niravim"
+exec nvim "$@"
